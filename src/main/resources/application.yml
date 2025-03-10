@@ -1,0 +1,14 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  data:
+    mongodb:
+      uri: mongodb+srv://${MONGO_USER}:${MONGO_PASS}@${MONGO_CLUSTER}/?retryWrites=true&w=majority&appName=Cluster0
+      database: analysis_indicators
+
+services:
+  indicator: https://mindicador.cl
+  translate:
+    url: https://api.lecto.ai
+    api-key: ${TRANSLATE_API_KEY}
