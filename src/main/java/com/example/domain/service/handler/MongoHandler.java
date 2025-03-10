@@ -7,7 +7,7 @@ import com.example.domain.repository.IndicatorsRequestRepository;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("mongoHandler")
 @Order(3)
 public class MongoHandler implements Handler<ProcessContext>{
 

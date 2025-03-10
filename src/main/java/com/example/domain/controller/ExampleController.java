@@ -3,7 +3,7 @@ package com.example.domain.controller;
 
 import com.example.domain.model.IndicatorsValidateRequest;
 import com.example.domain.model.IndicatorsValidateResponse;
-import com.example.domain.service.ExecutorService;
+import com.example.domain.service.HandlerExecutorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v2")
 public class ExampleController {
 
-    private final ExecutorService executor;
+    private final HandlerExecutorService executor;
 
-    public ExampleController(ExecutorService executor) {
+    public ExampleController(HandlerExecutorService executor) {
         this.executor = executor;
     }
 
